@@ -1,10 +1,3 @@
-# Quiz 71
-
-[Paper Solution]
-![](img/71_paper.jpg)
-
-[Code on Pycharm]
-```pycon
 import random
 class ipv6():
     def ipv6machine(N:int):
@@ -25,8 +18,4 @@ class ipv6():
                 i-=1
         return final
 
-print(ipv6.ipv6machine(1))
-```
-
-[Result]
-![](img/71_results.png)
+print(ipv6.ipv6machine(3))

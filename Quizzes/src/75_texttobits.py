@@ -1,4 +1,4 @@
-class pizza():
+class bits():
     def text_to_bits(text:str):
         temp, binary = "",""
         for i in text:
@@ -13,4 +13,4 @@ class pizza():
             temp=""
         return binary
 
-print(pizza.text_to_bits(text="Hello World!"))
+print(bits.text_to_bits(text="Hello World!"))

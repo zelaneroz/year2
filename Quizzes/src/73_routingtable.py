@@ -1,14 +1,23 @@
-def check_mac(mac_add:str):
-    if len(mac_add)==17:
-        return True
+import random
+class routingtable():
+    def ipv4(self):
+        return f"{random.randint(0,256)}.{random.randint(0,256)}.{random.randint(0,256)}.{random.randint(0,256)}"
 
-#if mac in routing_table, output the ip
-#if mac not in routing_table, create new ip and output it.
-#make sure new ip is not in existing ip
+    def table_manager(self,mac_add:str):
+        ip_add, routingtable = "", {}
+        #Validate mAC
+        if len(mac_add)!=17:
+            return "Please enter a valid MAC Address"
+        if mac_add in routingtable:
+            ip_add = routingtable[mac_add]
+        else:
+            while True:
+                ip_add=self.ipv4()
+                if ip_add not in routingtable.keys():
+                    break
+            routingtable[mac_add]=ip_add
+        print(routingtable)
+        return ip_add
 
-def routing_table_manager(mac_add:str):
-    table={} #[[mac,ip],[mac,ip]]
-    if check_mac(mac_add):
-       if mac_add.
-
-
+test = routingtable()
+print(test.table_manager("00:1A:2B:3C:4D:5E"))
